@@ -4,7 +4,7 @@ const cn = {
   WIP: "该功能仍在开发中……",
   Error: {
     Unauthorized:
-      "现在是未授权状态，请点击左下角[设置](/#/settings)按钮输入访问密码。",
+      "访问密码不正确或为空，请前往[设置](/#/settings)页输入正确的访问密码，或者填入你自己的 OpenAI API Key。",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 条对话`,
@@ -67,18 +67,22 @@ const cn = {
       ConfirmClearAll: "确认清除所有数据？",
     },
     Lang: {
-      Name: "Language",
+      Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`
       All: "所有语言",
       Options: {
         cn: "简体中文",
         en: "English",
         tw: "繁體中文",
+        fr: "Français",
         es: "Español",
         it: "Italiano",
         tr: "Türkçe",
         jp: "日本語",
         de: "Deutsch",
-        vi: "Vietnamese",
+        vi: "Tiếng Việt",
+        ru: "Русский",
+        cs: "Čeština",
+        ko: "한국어",
       },
     },
     Avatar: "头像",
@@ -149,7 +153,7 @@ const cn = {
     },
     AccessCode: {
       Title: "访问密码",
-      SubTitle: "已开启加密访问",
+      SubTitle: "管理员已开启加密访问",
       Placeholder: "请输入访问密码",
     },
     Model: "模型 (model)",
@@ -161,7 +165,7 @@ const cn = {
       Title: "单次回复限制 (max_tokens)",
       SubTitle: "单次交互所用的最大 Token 数",
     },
-    PresencePenlty: {
+    PresencePenalty: {
       Title: "话题新鲜度 (presence_penalty)",
       SubTitle: "值越大，越有可能扩展到新话题",
     },
@@ -237,6 +241,11 @@ const cn = {
   },
 };
 
-export type LocaleType = typeof cn;
+type DeepPartial<T> = T extends object
+  ? {
+      [P in keyof T]?: DeepPartial<T[P]>;
+    }
+  : T;
+export type LocaleType = DeepPartial<typeof cn>;
 
 export default cn;
