@@ -54,8 +54,13 @@ if ! command -v node >/dev/null || ! command -v git >/dev/null || ! command -v y
 fi
 
 # Clone the repository and install dependencies
+<<<<<<< HEAD
 git clone https://github.com/zoand/openchat
 cd openchat
+=======
+git clone https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web
+cd ChatGPT-Next-Web
+>>>>>>> upstream/main
 yarn install
 
 # Prompt user for environment variables

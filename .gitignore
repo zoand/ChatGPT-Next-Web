@@ -45,4 +45,8 @@ dev
 *.key
 *.key.pub
 
+<<<<<<< HEAD
 .github/workflows
+=======
+masks.json
+>>>>>>> upstream/main
