@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 export const OWNER = "zoand";
 export const REPO = "openchat";
-=======
-export const OWNER = "ChatGPTNextWeb";
-export const REPO = "ChatGPT-Next-Web";
->>>>>>> upstream/main
 export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
 export const PLUGINS_REPO_URL = `https://github.com/${OWNER}/NextChat-Awesome-Plugins`;
 export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;

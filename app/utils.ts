@@ -13,18 +13,12 @@ export function trimTopic(topic: string) {
   // Fix an issue where double quotes still show in the Indonesian language
   // This will remove the specified punctuation from the end of the string
   // and also trim quotes from both the start and end if they exist.
-<<<<<<< HEAD
-  return topic
-    .replace(/^["“”]+|["“”]+$/g, "")
-    .replace(/[，。！？”“"、,.!?]*$/, "");
-=======
   return (
     topic
       // fix for gemini
       .replace(/^["“”*]+|["“”*]+$/g, "")
       .replace(/[，。！？”“"、,.!?*]*$/, "")
   );
->>>>>>> upstream/main
 }
 
 export async function copyToClipboard(text: string) {
@@ -70,14 +64,7 @@ export async function downloadAs(text: string, filename: string) {
 
     if (result !== null) {
       try {
-<<<<<<< HEAD
-        await window.__TAURI__.fs.writeBinaryFile(
-          result,
-          new Uint8Array([...text].map((c) => c.charCodeAt(0))),
-        );
-=======
         await window.__TAURI__.fs.writeTextFile(result, text);
->>>>>>> upstream/main
         showToast(Locale.Download.Success);
       } catch (error) {
         showToast(Locale.Download.Failed);
@@ -240,8 +227,6 @@ export function isMacOS(): boolean {
     return !!macintosh;
   }
   return false;
-<<<<<<< HEAD
-=======
 }
 
 export function getMessageTextContent(message: RequestMessage) {
@@ -271,9 +256,7 @@ export function getMessageImages(message: RequestMessage): string[] {
 
 export function isVisionModel(model: string) {
   const visionModels = useAccessStore.getState().visionModels;
-  const envVisionModels = visionModels
-    ?.split(",")
-    .map((m) => m.trim());
+  const envVisionModels = visionModels?.split(",").map((m) => m.trim());
   if (envVisionModels?.includes(model)) {
     return true;
   }
@@ -455,5 +438,4 @@ export function semverCompare(a: string, b: string) {
     sensitivity: "case",
     caseFirst: "upper",
   });
->>>>>>> upstream/main
 }

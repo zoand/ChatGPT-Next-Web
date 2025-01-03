@@ -541,15 +541,8 @@ export function ImagePreviewer(props: {
           </div>
 
           <div>
-<<<<<<< HEAD
             <div className={styles["main-title"]}>openchat</div>
             <div className={styles["sub-title"]}>github.com/zoand/openchat</div>
-=======
-            <div className={styles["main-title"]}>NextChat</div>
-            <div className={styles["sub-title"]}>
-              github.com/ChatGPTNextWeb/ChatGPT-Next-Web
-            </div>
->>>>>>> upstream/main
             <div className={styles["icons"]}>
               <ExportAvatar avatar={config.avatar} />
               <span className={styles["icon-space"]}>&</span>

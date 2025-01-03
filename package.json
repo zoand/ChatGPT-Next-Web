@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "openchat",
-=======
-  "name": "nextchat",
->>>>>>> upstream/main
   "private": false,
   "license": "mit",
   "scripts": {
