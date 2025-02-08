@@ -45,8 +45,6 @@ dev
 *.key
 *.key.pub
 
-<<<<<<< HEAD
-.github/workflows
-=======
-masks.json
+# mcp config
+app/mcp/mcp_config.json
 >>>>>>> upstream/main
